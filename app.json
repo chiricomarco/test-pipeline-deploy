@@ -1,6 +1,6 @@
 {
     "scripts": {
-      "test-setup": "curl -O https://download.java.net/java/GA/jdk17/0d483a425adf4c78bd2d69a21231dafd/36/GPL/openjdk-17_linux-x64_bin.tar.gz && tar xvf openjdk-17_linux-x64_bin.tar.gz && export PATH=$PATH:$(pwd)/jdk-17/bin && java -version && composer install --ignore-platform-reqs",
+      "test-setup": "curl -s https://get.sdkman.io | bash && source $HOME/.sdkman/bin/sdkman-init.sh && sdk install java 17.0.8-tem && java -version && composer install --ignore-platform-reqs",
       "test": "./vendor/bin/pest && curl -L -o sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip && unzip sonar-scanner.zip && export PATH=$PATH:$(pwd)/sonar-scanner-4.6.2.2472-linux/bin && sonar-scanner"
     }
   }
