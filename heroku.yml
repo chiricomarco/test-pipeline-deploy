@@ -1,0 +1,5 @@
+build:
+  ci:
+    - composer install --ignore-platform-reqs
+    - composer test
+    - composer sonar-scanner
