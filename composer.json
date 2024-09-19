@@ -8,11 +8,7 @@
         "phpunit/phpunit": "^11.3",
         "pestphp/pest": "^3.0"
     },
-    "require-dev": {
-        "sonarsource/sonar-scanner-cli": "^4.6"
-    },
     "scripts": {
-        "test": "pest",
-        "sonar-scanner": "sonar-scanner"
+        "test": "pest"
     }
 }
