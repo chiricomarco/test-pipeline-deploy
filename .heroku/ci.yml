@@ -1,8 +1,12 @@
-build:
-  ci:
+version: 1
+test:
+  build:
     - composer install --ignore-platform-reqs
-    - composer test
+  script:
+    - ./vendor/bin/pest
     - curl -L -o sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
     - unzip sonar-scanner.zip
     - export PATH=$PATH:$(pwd)/sonar-scanner-4.6.2.2472-linux/bin
     - sonar-scanner
+quality_gate:
+  on_failure: exit 1
