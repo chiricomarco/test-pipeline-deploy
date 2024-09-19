@@ -3,6 +3,6 @@
 test('sum', function () {
     $result = 1 + 2;
   
-    expect($result)->toBe(4);
+    expect($result)->toBe(5);
  });
  
